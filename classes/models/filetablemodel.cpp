@@ -463,7 +463,7 @@ bool FileSortModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourcePar
 {
         QModelIndex index1 = sourceModel()->index(sourceRow, 1, sourceParent);
 
-        return sourceModel()->data(index1).toString().contains(filterRegExp());
+        return sourceModel()->data(index1).toString().contains(filterRegularExpression());
 }
 
 bool FileSortModel::lessThan(const QModelIndex &left, const QModelIndex &right) const

@@ -381,7 +381,7 @@ bool BackupSortModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceP
 {
         QModelIndex index1 = sourceModel()->index(sourceRow, filterKeyColumn(), sourceParent);
 
-        return sourceModel()->data(index1).toString().contains(filterRegExp());
+        return sourceModel()->data(index1).toString().contains(filterRegularExpression());
 }
 
 bool BackupSortModel::lessThan(const QModelIndex &left, const QModelIndex &right) const

@@ -418,7 +418,7 @@ bool AppSortModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourcePare
 {
         QModelIndex index1 = sourceModel()->index(sourceRow, filterKeyColumn(), sourceParent);
 
-        return sourceModel()->data(index1).toString().contains(filterRegExp());
+        return sourceModel()->data(index1).toString().contains(filterRegularExpression());
 }
 
 bool AppSortModel::lessThan(const QModelIndex &left, const QModelIndex &right) const

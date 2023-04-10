@@ -31,7 +31,7 @@
 #include <QIcon>
 #include <QDebug>
 #include <QDateTime>
-#include <QStringConverter>
+#include <QTextStream>
 #include "./models/filetablemodel.h"
 
 #define DISCONNECTED 0
@@ -90,7 +90,7 @@ public:
     static QString getIp();
     void setPath(QString newPath);
     ConnectionThread connectionThread;
-    QStringConverter *codec;
+    QTextStream *codec;
     static QStringList getGoogleAccounts();
     bool procesEvents;
 
